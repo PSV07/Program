@@ -1,0 +1,30 @@
+
+public class Array_Pseudo {
+
+	int insertion(int a[], int n , int pos, int val) {
+		
+		int i = n-1;
+		
+		while(i >= pos) {
+			a[i+1]= a[i];
+			i = i-1;
+		}
+		a[pos] = val;
+		n = n+1;
+		
+		return n;
+	}
+	
+	int delection(int []a, int n, int pos) {
+		
+		int value = a[pos];
+		while(pos < n-1) {
+			a[pos] = a[pos +1];
+			pos = pos +1;
+		}
+		System.out.println(value);
+		n = n-1;
+		
+		return n;
+	}
+}
